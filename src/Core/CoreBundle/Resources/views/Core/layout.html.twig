@@ -7,25 +7,13 @@
 
             <title>Eureka</title>
 
-            <link rel="shortcut icon" href="{{ asset("images/logoEurShortcut.png") }}">
+            <link rel="shortcut icon" href="{{ asset("assets/images/logoEurShortcut.png") }}">
 
             <link rel="stylesheet" type="text/css" href="{{ asset("assets/bootstrap/css/bootstrap.css") }}" media="all"/>
             <link rel="stylesheet" type="text/css" href="{{ asset("assets/css/main.css") }}" media="all" />
             <link rel="stylesheet" type="text/css" href="{{ asset("assets/bootstrap/css/dataTables.bootstrap.css") }}" media="all"/>
-            <!--javascript/jquery-->
-
-            <link rel="stylesheet" type="text/css" href="{{ asset("assets/components/jquery/jquery-ui.css") }}" media="screen"	/>
-            <script type="text/javascript" src="{{ asset("assets/jquery/jquery-1.10.2.js") }}"></script>
-            <script type="text/javascript" src="{{ asset("assets/jquery/jquery-ui.js") }}"></script>
-
-            <!--<script type="text/javascript" src="../web/assets/bootstrap/js/dataTables.bootstrap.js"></script>
-            <!--<script type="text/javascript" src="/web/components/bootstrap/js/jquery-1.11.1.min.js"></script>
-            <!--<script type="text/javascript" src="../../assets/components/bootstrap/js/jquery.dataTables.min.js"></script>
-
-            <!--<script type="text/javascript" src="../../assets/components/bootstrap/js/bootstrap.js"></script>
-            <!--<script type="text/javascript" src="../../assets/components/bootstrap/js/bootstrap-dropdown.js"></script>
-            <!--<script type="text/javascript" src="../../assets/js/suggestions.php"></script>
-            <!--<script type="text/javascript" src="../../assets/components/allFunction.js"></script>-->
+            <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+            <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
 
         </head>
 
@@ -34,12 +22,12 @@
             <div class="row well">
                 <ul style="text-align:center;" class="nav nav-pills">
                     <!--LOGO -->
-                    <li><a href="{{ url('accueil_homepage') }}" title="Accueil"> <img src="{{ asset("images/logo.png") }}"alt="Logo Eureka"/></a></li>
-                    
-                    <li><a href="{{ url('accueil_homepage') }}" title="Accueil"><img src="{{ asset("images/cap.jpg") }}" alt="Accueil"/></a></li>
-                    <li><a href="{{ url('presentation_homepage') }}" title="Présentation"><img src="{{ asset("images/cap2.jpg") }}" alt="Présentation"/></a></li>
-                    <li><a href="{{ url('intranet_accueil') }}" title="Intranet"><img src="{{ asset("images/cap3.jpg") }}" alt="Intranet"/></a></li>					
-                    <li><a href="{{ url('contact_homepage') }}" title="Contact"><img src="{{ asset("images/cap4.jpg") }}" alt="Contact"/></a></li>
+                    <li><a href="{{ url('accueil_homepage') }}" title="Accueil"> <img src="{{ asset("assets/images/logo.png") }}"alt="Logo Eureka"/></a></li>
+
+                    <li><a href="{{ url('accueil_homepage') }}" title="Accueil"><img src="{{ asset("assets/images/cap.jpg") }}" alt="Accueil"/></a></li>
+                    <li><a href="{{ url('presentation_homepage') }}" title="Présentation"><img src="{{ asset("assets/images/cap2.jpg") }}" alt="Présentation"/></a></li>
+                    <li><a href="{{ url('intranet_accueil') }}" title="Intranet"><img src="{{ asset("assets/images/cap3.jpg") }}" alt="Intranet"/></a></li>					
+                    <li><a href="{{ url('contact_homepage') }}" title="Contact"><img src="{{ asset("assets/images/cap4.jpg") }}" alt="Contact"/></a></li>
                 </ul>		
             </div>
 
@@ -52,4 +40,6 @@
             </footer>
 
         </body>
+
+        <script type="text/javascript" src="{{ asset("assets/scripts/behaviour.js") }}"></script>
     </html>

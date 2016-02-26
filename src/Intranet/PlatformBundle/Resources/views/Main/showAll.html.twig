@@ -14,11 +14,12 @@
         <tbody>
             {% for demandes in demandes %}
                 <tr class="warning">
-                    <td>{{ demandes.id }}</td>
-                    <td>{{ demandes.dateDebut|date('Y-m-d') }}</td>
+                    <td class="content" >{{ demandes.id }}</td>
+                    <td class="content" >{{ demandes.dateDebut|date('Y-m-d') }}</td>
                     <td>{{ demandes.dateFin|date('Y-m-d') }}</td>
                     <td>{{ demandes.description }}</td>
-                    <td><a href="{{ path('intranet_voir-ma-demande', { 'id' : demandes.id }) }}" type="button" class="btn btn-default">Voir la demande</a></td>
+                    <td><a id="description" type="button" class="btn btn-default">Description</a></td>
+                    <td><a href="{{ path('intranet_voir-ma-demande', { 'id' : demandes.id }) }}" type="button" class="btn btn-primary">Voir la demande</a></td>
                     <td><a href="{{ path('intranet_modifier-ma-demande', { 'id' : demandes.id }) }}" type="button" class="btn btn-warning">Modifier</a></td>
                     <td><a href="{{ path('intranet_supprimer-ma-demande', { 'id' : demandes.id }) }}" type="button" class="btn btn-danger">Supprimer</a></td>
 
@@ -26,4 +27,7 @@
     {% endfor %}
 </tbody>
 
+<div id="dialog">
+    <h1>amandine</h1>
+</div>
 {% endblock %}

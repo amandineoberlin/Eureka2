@@ -1,6 +1,6 @@
 {% extends "IntranetPlatformBundle::layout.html.twig" %}
 {% block body %}
 
-    <p>Page accueil</p>
+    <p>Bonjour {{ app.user.username }} {{ app.user.roles|join(', ')  }} </p>
     
 {% endblock %}

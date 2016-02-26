@@ -16,8 +16,8 @@ class __TwigTemplate_6cd63de9bf0ab358df55f60025112ac8d4f15e5ea6198ad5b54f7d7f8db
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_aac138b1f1b5622258468e99326bfe6acd5fc2ed1c34e0d2b42b31dd5940964b = $this->env->getExtension("native_profiler");
-        $__internal_aac138b1f1b5622258468e99326bfe6acd5fc2ed1c34e0d2b42b31dd5940964b->enter($__internal_aac138b1f1b5622258468e99326bfe6acd5fc2ed1c34e0d2b42b31dd5940964b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "CoreCoreBundle:Core:layout.html.twig"));
+        $__internal_461cbf32fd52039d3aace94ae009de8871e9269f367d835514680093b18026dd = $this->env->getExtension("native_profiler");
+        $__internal_461cbf32fd52039d3aace94ae009de8871e9269f367d835514680093b18026dd->enter($__internal_461cbf32fd52039d3aace94ae009de8871e9269f367d835514680093b18026dd_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "CoreCoreBundle:Core:layout.html.twig"));
 
         // line 1
         echo "<!DOCTYPE HTML>
@@ -31,7 +31,7 @@ class __TwigTemplate_6cd63de9bf0ab358df55f60025112ac8d4f15e5ea6198ad5b54f7d7f8db
 
             <link rel=\"shortcut icon\" href=\"";
         // line 10
-        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("images/logoEurShortcut.png"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("assets/images/logoEurShortcut.png"), "html", null, true);
         echo "\">
 
             <link rel=\"stylesheet\" type=\"text/css\" href=\"";
@@ -46,29 +46,8 @@ class __TwigTemplate_6cd63de9bf0ab358df55f60025112ac8d4f15e5ea6198ad5b54f7d7f8db
         // line 14
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("assets/bootstrap/css/dataTables.bootstrap.css"), "html", null, true);
         echo "\" media=\"all\"/>
-            <!--javascript/jquery-->
-
-            <link rel=\"stylesheet\" type=\"text/css\" href=\"";
-        // line 17
-        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("assets/components/jquery/jquery-ui.css"), "html", null, true);
-        echo "\" media=\"screen\"\t/>
-            <script type=\"text/javascript\" src=\"";
-        // line 18
-        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("assets/jquery/jquery-1.10.2.js"), "html", null, true);
-        echo "\"></script>
-            <script type=\"text/javascript\" src=\"";
-        // line 19
-        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("assets/jquery/jquery-ui.js"), "html", null, true);
-        echo "\"></script>
-
-            <!--<script type=\"text/javascript\" src=\"../web/assets/bootstrap/js/dataTables.bootstrap.js\"></script>
-            <!--<script type=\"text/javascript\" src=\"/web/components/bootstrap/js/jquery-1.11.1.min.js\"></script>
-            <!--<script type=\"text/javascript\" src=\"../../assets/components/bootstrap/js/jquery.dataTables.min.js\"></script>
-
-            <!--<script type=\"text/javascript\" src=\"../../assets/components/bootstrap/js/bootstrap.js\"></script>
-            <!--<script type=\"text/javascript\" src=\"../../assets/components/bootstrap/js/bootstrap-dropdown.js\"></script>
-            <!--<script type=\"text/javascript\" src=\"../../assets/js/suggestions.php\"></script>
-            <!--<script type=\"text/javascript\" src=\"../../assets/components/allFunction.js\"></script>-->
+            <script src=\"//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js\"></script>
+            <script src=\"//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js\"></script>
 
         </head>
 
@@ -78,66 +57,71 @@ class __TwigTemplate_6cd63de9bf0ab358df55f60025112ac8d4f15e5ea6198ad5b54f7d7f8db
                 <ul style=\"text-align:center;\" class=\"nav nav-pills\">
                     <!--LOGO -->
                     <li><a href=\"";
-        // line 37
+        // line 25
         echo $this->env->getExtension('routing')->getUrl("accueil_homepage");
         echo "\" title=\"Accueil\"> <img src=\"";
-        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("images/logo.png"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("assets/images/logo.png"), "html", null, true);
         echo "\"alt=\"Logo Eureka\"/></a></li>
-                    
+
                     <li><a href=\"";
-        // line 39
+        // line 27
         echo $this->env->getExtension('routing')->getUrl("accueil_homepage");
         echo "\" title=\"Accueil\"><img src=\"";
-        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("images/cap.jpg"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("assets/images/cap.jpg"), "html", null, true);
         echo "\" alt=\"Accueil\"/></a></li>
                     <li><a href=\"";
-        // line 40
+        // line 28
         echo $this->env->getExtension('routing')->getUrl("presentation_homepage");
         echo "\" title=\"Présentation\"><img src=\"";
-        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("images/cap2.jpg"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("assets/images/cap2.jpg"), "html", null, true);
         echo "\" alt=\"Présentation\"/></a></li>
                     <li><a href=\"";
-        // line 41
+        // line 29
         echo $this->env->getExtension('routing')->getUrl("intranet_accueil");
         echo "\" title=\"Intranet\"><img src=\"";
-        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("images/cap3.jpg"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("assets/images/cap3.jpg"), "html", null, true);
         echo "\" alt=\"Intranet\"/></a></li>\t\t\t\t\t
                     <li><a href=\"";
-        // line 42
+        // line 30
         echo $this->env->getExtension('routing')->getUrl("contact_homepage");
         echo "\" title=\"Contact\"><img src=\"";
-        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("images/cap4.jpg"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("assets/images/cap4.jpg"), "html", null, true);
         echo "\" alt=\"Contact\"/></a></li>
                 </ul>\t\t
             </div>
 
 
             ";
-        // line 47
+        // line 35
         $this->displayBlock('nav', $context, $blocks);
-        // line 49
+        // line 37
         echo "
 
             <footer>     \t\t
             </footer>
 
         </body>
+
+        <script type=\"text/javascript\" src=\"";
+        // line 44
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("assets/scripts/behaviour.js"), "html", null, true);
+        echo "\"></script>
     </html>";
         
-        $__internal_aac138b1f1b5622258468e99326bfe6acd5fc2ed1c34e0d2b42b31dd5940964b->leave($__internal_aac138b1f1b5622258468e99326bfe6acd5fc2ed1c34e0d2b42b31dd5940964b_prof);
+        $__internal_461cbf32fd52039d3aace94ae009de8871e9269f367d835514680093b18026dd->leave($__internal_461cbf32fd52039d3aace94ae009de8871e9269f367d835514680093b18026dd_prof);
 
     }
 
-    // line 47
+    // line 35
     public function block_nav($context, array $blocks = array())
     {
-        $__internal_5de3ee8297cebf0dc9736ef0f4f34bfb02b80b387b6cedb0be45fef573ee2715 = $this->env->getExtension("native_profiler");
-        $__internal_5de3ee8297cebf0dc9736ef0f4f34bfb02b80b387b6cedb0be45fef573ee2715->enter($__internal_5de3ee8297cebf0dc9736ef0f4f34bfb02b80b387b6cedb0be45fef573ee2715_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "nav"));
+        $__internal_d2d7819b48415a9f5639373069f310b6b09ee2ba63cc3bc729a088e4283c46bb = $this->env->getExtension("native_profiler");
+        $__internal_d2d7819b48415a9f5639373069f310b6b09ee2ba63cc3bc729a088e4283c46bb->enter($__internal_d2d7819b48415a9f5639373069f310b6b09ee2ba63cc3bc729a088e4283c46bb_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "nav"));
 
-        // line 48
+        // line 36
         echo "            ";
         
-        $__internal_5de3ee8297cebf0dc9736ef0f4f34bfb02b80b387b6cedb0be45fef573ee2715->leave($__internal_5de3ee8297cebf0dc9736ef0f4f34bfb02b80b387b6cedb0be45fef573ee2715_prof);
+        $__internal_d2d7819b48415a9f5639373069f310b6b09ee2ba63cc3bc729a088e4283c46bb->leave($__internal_d2d7819b48415a9f5639373069f310b6b09ee2ba63cc3bc729a088e4283c46bb_prof);
 
     }
 
@@ -153,7 +137,7 @@ class __TwigTemplate_6cd63de9bf0ab358df55f60025112ac8d4f15e5ea6198ad5b54f7d7f8db
 
     public function getDebugInfo()
     {
-        return array (  138 => 48,  132 => 47,  119 => 49,  117 => 47,  107 => 42,  101 => 41,  95 => 40,  89 => 39,  82 => 37,  61 => 19,  57 => 18,  53 => 17,  47 => 14,  43 => 13,  39 => 12,  34 => 10,  23 => 1,);
+        return array (  122 => 36,  116 => 35,  107 => 44,  98 => 37,  96 => 35,  86 => 30,  80 => 29,  74 => 28,  68 => 27,  61 => 25,  47 => 14,  43 => 13,  39 => 12,  34 => 10,  23 => 1,);
     }
 }
 /* <!DOCTYPE HTML>*/
@@ -165,25 +149,13 @@ class __TwigTemplate_6cd63de9bf0ab358df55f60025112ac8d4f15e5ea6198ad5b54f7d7f8db
 /* */
 /*             <title>Eureka</title>*/
 /* */
-/*             <link rel="shortcut icon" href="{{ asset("images/logoEurShortcut.png") }}">*/
+/*             <link rel="shortcut icon" href="{{ asset("assets/images/logoEurShortcut.png") }}">*/
 /* */
 /*             <link rel="stylesheet" type="text/css" href="{{ asset("assets/bootstrap/css/bootstrap.css") }}" media="all"/>*/
 /*             <link rel="stylesheet" type="text/css" href="{{ asset("assets/css/main.css") }}" media="all" />*/
 /*             <link rel="stylesheet" type="text/css" href="{{ asset("assets/bootstrap/css/dataTables.bootstrap.css") }}" media="all"/>*/
-/*             <!--javascript/jquery-->*/
-/* */
-/*             <link rel="stylesheet" type="text/css" href="{{ asset("assets/components/jquery/jquery-ui.css") }}" media="screen"	/>*/
-/*             <script type="text/javascript" src="{{ asset("assets/jquery/jquery-1.10.2.js") }}"></script>*/
-/*             <script type="text/javascript" src="{{ asset("assets/jquery/jquery-ui.js") }}"></script>*/
-/* */
-/*             <!--<script type="text/javascript" src="../web/assets/bootstrap/js/dataTables.bootstrap.js"></script>*/
-/*             <!--<script type="text/javascript" src="/web/components/bootstrap/js/jquery-1.11.1.min.js"></script>*/
-/*             <!--<script type="text/javascript" src="../../assets/components/bootstrap/js/jquery.dataTables.min.js"></script>*/
-/* */
-/*             <!--<script type="text/javascript" src="../../assets/components/bootstrap/js/bootstrap.js"></script>*/
-/*             <!--<script type="text/javascript" src="../../assets/components/bootstrap/js/bootstrap-dropdown.js"></script>*/
-/*             <!--<script type="text/javascript" src="../../assets/js/suggestions.php"></script>*/
-/*             <!--<script type="text/javascript" src="../../assets/components/allFunction.js"></script>-->*/
+/*             <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>*/
+/*             <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>*/
 /* */
 /*         </head>*/
 /* */
@@ -192,12 +164,12 @@ class __TwigTemplate_6cd63de9bf0ab358df55f60025112ac8d4f15e5ea6198ad5b54f7d7f8db
 /*             <div class="row well">*/
 /*                 <ul style="text-align:center;" class="nav nav-pills">*/
 /*                     <!--LOGO -->*/
-/*                     <li><a href="{{ url('accueil_homepage') }}" title="Accueil"> <img src="{{ asset("images/logo.png") }}"alt="Logo Eureka"/></a></li>*/
-/*                     */
-/*                     <li><a href="{{ url('accueil_homepage') }}" title="Accueil"><img src="{{ asset("images/cap.jpg") }}" alt="Accueil"/></a></li>*/
-/*                     <li><a href="{{ url('presentation_homepage') }}" title="Présentation"><img src="{{ asset("images/cap2.jpg") }}" alt="Présentation"/></a></li>*/
-/*                     <li><a href="{{ url('intranet_accueil') }}" title="Intranet"><img src="{{ asset("images/cap3.jpg") }}" alt="Intranet"/></a></li>					*/
-/*                     <li><a href="{{ url('contact_homepage') }}" title="Contact"><img src="{{ asset("images/cap4.jpg") }}" alt="Contact"/></a></li>*/
+/*                     <li><a href="{{ url('accueil_homepage') }}" title="Accueil"> <img src="{{ asset("assets/images/logo.png") }}"alt="Logo Eureka"/></a></li>*/
+/* */
+/*                     <li><a href="{{ url('accueil_homepage') }}" title="Accueil"><img src="{{ asset("assets/images/cap.jpg") }}" alt="Accueil"/></a></li>*/
+/*                     <li><a href="{{ url('presentation_homepage') }}" title="Présentation"><img src="{{ asset("assets/images/cap2.jpg") }}" alt="Présentation"/></a></li>*/
+/*                     <li><a href="{{ url('intranet_accueil') }}" title="Intranet"><img src="{{ asset("assets/images/cap3.jpg") }}" alt="Intranet"/></a></li>					*/
+/*                     <li><a href="{{ url('contact_homepage') }}" title="Contact"><img src="{{ asset("assets/images/cap4.jpg") }}" alt="Contact"/></a></li>*/
 /*                 </ul>		*/
 /*             </div>*/
 /* */
@@ -210,4 +182,6 @@ class __TwigTemplate_6cd63de9bf0ab358df55f60025112ac8d4f15e5ea6198ad5b54f7d7f8db
 /*             </footer>*/
 /* */
 /*         </body>*/
+/* */
+/*         <script type="text/javascript" src="{{ asset("assets/scripts/behaviour.js") }}"></script>*/
 /*     </html>*/
