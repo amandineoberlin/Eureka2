@@ -16,10 +16,10 @@
 
             {% if is_granted('ROLE_USER') %}
                 <nav class="navbar btn-group-justified  navbar-inverse ">
-                    <a class="navbar-brand" href="">Accueil</a>
+                    <a class="navbar-brand" href="{{ path("intranet_accueil") }}">Accueil</a>
                     <a class="navbar-brand" href="{{ path("fos_user_profile_show") }}">Mon Compte</a>
-                    <a class="navbar-brand" href="">Faire une demande</a>
-                    <a class="navbar-brand" href="">Mes demandes</a>
+                    <a class="navbar-brand" href="{{ path("intranet_faire-une-demande") }}">Faire une demande</a>
+                    <a class="navbar-brand" href="{{ path("intranet_voir-mes-demandes") }}">Mes demandes</a>
                     <a class="navbar-brand" href="">Mes Factures</a>
                     <a class="navbar-brand" href="{{ path("fos_user_security_logout") }}">D&eacute;connexion</a>
                 </nav>

@@ -16,8 +16,8 @@ class __TwigTemplate_6cd63de9bf0ab358df55f60025112ac8d4f15e5ea6198ad5b54f7d7f8db
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_ee2137d1bde6e9be8cdc6b5d4fcbae82cb2d64b5ee41f0aa2ade6bcec0a03a40 = $this->env->getExtension("native_profiler");
-        $__internal_ee2137d1bde6e9be8cdc6b5d4fcbae82cb2d64b5ee41f0aa2ade6bcec0a03a40->enter($__internal_ee2137d1bde6e9be8cdc6b5d4fcbae82cb2d64b5ee41f0aa2ade6bcec0a03a40_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "CoreCoreBundle:Core:layout.html.twig"));
+        $__internal_aac138b1f1b5622258468e99326bfe6acd5fc2ed1c34e0d2b42b31dd5940964b = $this->env->getExtension("native_profiler");
+        $__internal_aac138b1f1b5622258468e99326bfe6acd5fc2ed1c34e0d2b42b31dd5940964b->enter($__internal_aac138b1f1b5622258468e99326bfe6acd5fc2ed1c34e0d2b42b31dd5940964b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "CoreCoreBundle:Core:layout.html.twig"));
 
         // line 1
         echo "<!DOCTYPE HTML>
@@ -119,33 +119,25 @@ class __TwigTemplate_6cd63de9bf0ab358df55f60025112ac8d4f15e5ea6198ad5b54f7d7f8db
         echo "
 
             <footer>     \t\t
-                <div class=\"well row\">
-                    <ul class=\"nav nav-pills nav-justified col-md-12\">
-                        <li><a id=\"opener1\" style=\"text-decoration:none; cursor:pointer;\">Mention L&eacute;gales </a></li>
-                        <li><a id=\"opener2\" style=\" cursor:pointer;\">D&eacute;veloppement </a></li>
-                        <li><a id=\"opener4\" style=\" cursor:pointer;\"><i class=\"glyphicon glyphicon-copyright-mark\"></i> Copyright 2015-2016 </a></li>
-                        <li><a href=\"#haut\" style=\" cursor:pointer;\">Vers le haut </a></li>
-                    </ul>
-                </div>
             </footer>
 
         </body>
     </html>";
         
-        $__internal_ee2137d1bde6e9be8cdc6b5d4fcbae82cb2d64b5ee41f0aa2ade6bcec0a03a40->leave($__internal_ee2137d1bde6e9be8cdc6b5d4fcbae82cb2d64b5ee41f0aa2ade6bcec0a03a40_prof);
+        $__internal_aac138b1f1b5622258468e99326bfe6acd5fc2ed1c34e0d2b42b31dd5940964b->leave($__internal_aac138b1f1b5622258468e99326bfe6acd5fc2ed1c34e0d2b42b31dd5940964b_prof);
 
     }
 
     // line 47
     public function block_nav($context, array $blocks = array())
     {
-        $__internal_cb21d8405343dd990218128e763434baf3d7a54ad830e4a62868fd675d204bdd = $this->env->getExtension("native_profiler");
-        $__internal_cb21d8405343dd990218128e763434baf3d7a54ad830e4a62868fd675d204bdd->enter($__internal_cb21d8405343dd990218128e763434baf3d7a54ad830e4a62868fd675d204bdd_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "nav"));
+        $__internal_5de3ee8297cebf0dc9736ef0f4f34bfb02b80b387b6cedb0be45fef573ee2715 = $this->env->getExtension("native_profiler");
+        $__internal_5de3ee8297cebf0dc9736ef0f4f34bfb02b80b387b6cedb0be45fef573ee2715->enter($__internal_5de3ee8297cebf0dc9736ef0f4f34bfb02b80b387b6cedb0be45fef573ee2715_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "nav"));
 
         // line 48
         echo "            ";
         
-        $__internal_cb21d8405343dd990218128e763434baf3d7a54ad830e4a62868fd675d204bdd->leave($__internal_cb21d8405343dd990218128e763434baf3d7a54ad830e4a62868fd675d204bdd_prof);
+        $__internal_5de3ee8297cebf0dc9736ef0f4f34bfb02b80b387b6cedb0be45fef573ee2715->leave($__internal_5de3ee8297cebf0dc9736ef0f4f34bfb02b80b387b6cedb0be45fef573ee2715_prof);
 
     }
 
@@ -161,7 +153,7 @@ class __TwigTemplate_6cd63de9bf0ab358df55f60025112ac8d4f15e5ea6198ad5b54f7d7f8db
 
     public function getDebugInfo()
     {
-        return array (  146 => 48,  140 => 47,  119 => 49,  117 => 47,  107 => 42,  101 => 41,  95 => 40,  89 => 39,  82 => 37,  61 => 19,  57 => 18,  53 => 17,  47 => 14,  43 => 13,  39 => 12,  34 => 10,  23 => 1,);
+        return array (  138 => 48,  132 => 47,  119 => 49,  117 => 47,  107 => 42,  101 => 41,  95 => 40,  89 => 39,  82 => 37,  61 => 19,  57 => 18,  53 => 17,  47 => 14,  43 => 13,  39 => 12,  34 => 10,  23 => 1,);
     }
 }
 /* <!DOCTYPE HTML>*/
@@ -215,14 +207,6 @@ class __TwigTemplate_6cd63de9bf0ab358df55f60025112ac8d4f15e5ea6198ad5b54f7d7f8db
 /* */
 /* */
 /*             <footer>     		*/
-/*                 <div class="well row">*/
-/*                     <ul class="nav nav-pills nav-justified col-md-12">*/
-/*                         <li><a id="opener1" style="text-decoration:none; cursor:pointer;">Mention L&eacute;gales </a></li>*/
-/*                         <li><a id="opener2" style=" cursor:pointer;">D&eacute;veloppement </a></li>*/
-/*                         <li><a id="opener4" style=" cursor:pointer;"><i class="glyphicon glyphicon-copyright-mark"></i> Copyright 2015-2016 </a></li>*/
-/*                         <li><a href="#haut" style=" cursor:pointer;">Vers le haut </a></li>*/
-/*                     </ul>*/
-/*                 </div>*/
 /*             </footer>*/
 /* */
 /*         </body>*/

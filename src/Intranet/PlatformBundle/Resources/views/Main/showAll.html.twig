@@ -1,0 +1,29 @@
+{% extends "IntranetPlatformBundle::layout.html.twig" %}
+{% block body %}
+
+    <table class="table">
+        <h4>Mes demandes</h4>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Date de Début</th>
+                <th>Date de Fin</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for demandes in demandes %}
+                <tr class="warning">
+                    <td>{{ demandes.id }}</td>
+                    <td>{{ demandes.dateDebut|date('Y-m-d') }}</td>
+                    <td>{{ demandes.dateFin|date('Y-m-d') }}</td>
+                    <td>{{ demandes.description }}</td>
+                    <td><a href="{{ path('intranet_voir-ma-demande', { 'id' : demandes.id }) }}" type="button" class="btn btn-default">Voir la demande</a></td>
+                    <td><a href="{{ path('intranet_modifier-ma-demande', { 'id' : demandes.id }) }}" type="button" class="btn btn-warning">Modifier</a></td>
+                    <td><button type="button" class="btn btn-danger">Supprimer</button></td>
+
+        </tr>
+    {% endfor %}
+</tbody>
+
+{% endblock %}

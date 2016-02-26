@@ -3,3 +3,19 @@
 intranet_accueil:
     path:     /accueil
     defaults: { _controller: IntranetPlatformBundle:Main:accueil }
+    
+intranet_faire-une-demande:
+    path:     /faire-une-demande
+    defaults: { _controller: IntranetPlatformBundle:Main:add }
+    
+intranet_voir-mes-demandes:
+    path:     /voir-mes-demandes
+    defaults: { _controller: IntranetPlatformBundle:Main:showAll }
+    
+intranet_voir-ma-demande:
+    path:     /voir-ma-demande/{id}
+    defaults: { _controller: IntranetPlatformBundle:Main:showOne }
+
+intranet_modifier-ma-demande:
+    path:     /modifier-ma-demande/{id}
+    defaults: { _controller: IntranetPlatformBundle:Main:edit }

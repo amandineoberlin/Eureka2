@@ -133,6 +133,29 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                 return array (  '_controller' => 'Intranet\\PlatformBundle\\Controller\\MainController::accueilAction',  '_route' => 'intranet_accueil',);
             }
 
+            // intranet_faire-une-demande
+            if ($pathinfo === '/Intranet/faire-une-demande') {
+                return array (  '_controller' => 'Intranet\\PlatformBundle\\Controller\\MainController::addAction',  '_route' => 'intranet_faire-une-demande',);
+            }
+
+            if (0 === strpos($pathinfo, '/Intranet/voir-m')) {
+                // intranet_voir-mes-demandes
+                if ($pathinfo === '/Intranet/voir-mes-demandes') {
+                    return array (  '_controller' => 'Intranet\\PlatformBundle\\Controller\\MainController::showAllAction',  '_route' => 'intranet_voir-mes-demandes',);
+                }
+
+                // intranet_voir-ma-demande
+                if (0 === strpos($pathinfo, '/Intranet/voir-ma-demande') && preg_match('#^/Intranet/voir\\-ma\\-demande/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'intranet_voir-ma-demande')), array (  '_controller' => 'Intranet\\PlatformBundle\\Controller\\MainController::showOneAction',));
+                }
+
+            }
+
+            // intranet_modifier-ma-demande
+            if (0 === strpos($pathinfo, '/Intranet/modifier-ma-demande') && preg_match('#^/Intranet/modifier\\-ma\\-demande/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'intranet_modifier-ma-demande')), array (  '_controller' => 'Intranet\\PlatformBundle\\Controller\\MainController::editAction',));
+            }
+
             if (0 === strpos($pathinfo, '/Intranet/log')) {
                 if (0 === strpos($pathinfo, '/Intranet/login')) {
                     // fos_user_security_login

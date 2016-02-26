@@ -1,0 +1,30 @@
+{% extends "IntranetPlatformBundle::layout.html.twig" %}
+{% block body %}
+
+    <table class="table">
+        <h4>Ma demande ID: {{ maDemande.id }}</h4>
+        <thead>
+            <tr>
+                <th>Champs</th>
+                <th>Valeur</th>
+            </tr>
+        </thead>
+        <tbody>  
+
+            <tr class="warning">
+                <td>Description : </td>
+                <td>{{ maDemande.description }}</td>
+            </tr>
+            <tr class="warning">
+                <td>Date de début : </td>
+                <td>{{ maDemande.dateDebut|date('Y-m-d') }}</td>
+            </tr>
+            <tr class="warning">
+                <td>Date de fin : </td>
+                <td>{{ maDemande.dateFin|date('Y-m-d') }}</td>
+            </tr>
+        <a href="{{ path("intranet_voir-mes-demandes") }}" class="btn btn-info btn-large"><i class="icon-white icon-heart"></i>Retour à la liste</a>
+
+    </tbody>
+
+{% endblock %}

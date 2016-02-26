@@ -1,0 +1,18 @@
+Intranet\PlatformBundle\Entity\Demande:
+    type: entity
+    table: null
+    repositoryClass: Intranet\PlatformBundle\Entity\DemandeRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        dateDebut:
+            type: date
+        dateFin:
+            type: datetime
+        description:
+            type: text
+    lifecycleCallbacks: {  }
