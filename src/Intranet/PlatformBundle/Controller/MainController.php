@@ -15,7 +15,7 @@ class MainController extends Controller {
     }
 
     public function addAction(Request $request) {
-// On crée un objet Advert
+// On crée un objet Demande
         $demande = new Demande();
 
 // On crée le FormBuilder grâce au service form factory
@@ -27,8 +27,10 @@ class MainController extends Controller {
                 ->add('dateFin', 'date')
                 ->add('description', 'textarea')
                 ->add('save', 'submit')
-                ->getForm();
         ;
+
+        // À partir du formBuilder, on génère le formulaire
+        $form = $formBuilder->getForm();
 
 // On fait le lien Requête <-> Formulaire
 // À partir de maintenant, la variable $demande contient les valeurs entrées dans le formulaire par le visiteur
