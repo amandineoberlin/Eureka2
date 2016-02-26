@@ -1,0 +1,49 @@
+{% extends "CoreCoreBundle:Core:layout.html.twig" %}
+{% block nav %}
+    {# onglets de navigation affichés par condition de roles tels que définis dans app/security.yml 
+    #}
+
+    {% if is_granted('ROLE_USER') %}
+        <div class="row">
+            <h3 class="col-md-offset-1 col-md-10 well" style="text-align:center;">
+                Menu Client </h3>
+            {% elseif is_granted('ROLE_ADMIN') %} 
+            <div class="row">
+                <h3 class="col-md-offset-1 col-md-10 well" style="text-align:center;">
+                    Menu Client </h3>
+                {% endif %}
+
+
+            {% if is_granted('ROLE_USER') %}
+                <nav class="navbar btn-group-justified  navbar-inverse ">
+                    <a class="navbar-brand" href="">Accueil</a>
+                    <a class="navbar-brand" href="{{ path("fos_user_profile_show") }}">Mon Compte</a>
+                    <a class="navbar-brand" href="">Faire une demande</a>
+                    <a class="navbar-brand" href="">Mes demandes</a>
+                    <a class="navbar-brand" href="">Mes Factures</a>
+                    <a class="navbar-brand" href="{{ path("fos_user_security_logout") }}">D&eacute;connexion</a>
+                </nav>
+            </div>
+        {% elseif is_granted('ROLE_ADMIN') %}
+            <nav class="navbar btn-group-justified  navbar-inverse ">
+                <a class="navbar-brand" href="">Accueil</a>
+                <a class="navbar-brand" href="">Mon Compte</a>
+                <a class="navbar-brand" href="">Donn&eacute;es clients</a>
+                <a class="navbar-brand" href="">Demandes</a>
+                <a class="navbar-brand" href="">Factures</a>
+                <a class="navbar-brand" href="">Administration</a>
+                <a class="navbar-brand" href="{{ path("fos_user_security_logout") }}">D&eacute;connexion</a>  
+            </nav>
+        </div>
+    {% endif %}
+
+
+    {% block body %}
+    {% endblock %}
+
+{% endblock %}
+
+
+
+
+

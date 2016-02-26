@@ -1,0 +1,5 @@
+#Via app/config/routing.yml toutes les routes commencent par "Contact"
+
+contact_homepage:
+    path:     /
+    defaults: { _controller: CoreContactBundle:Contact:index }

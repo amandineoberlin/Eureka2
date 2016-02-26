@@ -1,0 +1,4 @@
+services:
+#    core_presentation.example:
+#        class: Core\PresentationBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]

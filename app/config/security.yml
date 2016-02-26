@@ -1,0 +1,51 @@
+# To get started with security, check out the documentation:
+# http://symfony.com/doc/current/book/security.html
+security:
+    encoders:
+        Intranet\UserBundle\Entity\User: sha512
+
+    role_hierarchy:
+        #l'admin hérite du role user
+        ROLE_ADMIN:
+        ROLE_USER:
+        
+    # http://symfony.com/doc/current/book/security.html#where-do-users-come-from-user-providers
+    providers:
+    #Mon provider s'appelle "main" (complétement arbitraire)
+        main:
+            #Mais je dois utiliser ça comme fournisseur car c'est ce que requiert le FOSUserBundle
+            id: fos_user.user_provider.username_email
+
+    firewalls:
+        # disables authentication for assets and the profiler, adapt it according to your needs
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+
+        # parefeu principal, concerne toutes les url, autorise les anonymes
+        main:
+            pattern:        ^/
+            anonymous:      true
+            #le parefeu utilisera ce provider défini plus haut pour récupérer les utilisateurs
+            provider:       main
+            #methode d'authentification sera via un formulaire html
+            form_login:
+                login_path: fos_user_security_login
+                check_path: fos_user_security_check
+            #Je redirige vers la route page d'accueil quand l'user est authentifié
+                default_target_path: intranet_accueil
+            logout:
+                path:       fos_user_security_logout
+                #url vers laquelle sera redirige l'utilisateur apres deconnexion
+                target:     fos_user_security_login
+            #Parametre permettant le "se souvenir de moi"
+            remember_me:
+                # %secret% est un paramètre de parameters.yml
+                key:        %secret% 
+            
+    access_control:
+    #toutes URL accessible par un anonyme sauf celles commençant par Intranet (sauf le login et register)
+        - { path: ^/Intranet/login, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/Intranet/register, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/Intranet, role: ROLE_USER }
+        

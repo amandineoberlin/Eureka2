@@ -1,0 +1,5 @@
+#Via app/config/routing.yml toutes les routes commencent par "Intranet"
+
+intranet_accueil:
+    path:     /accueil
+    defaults: { _controller: IntranetPlatformBundle:Main:accueil }

@@ -1,0 +1,20 @@
+{% trans_default_domain 'FOSUserBundle' %}
+
+{# Lien de redirection vers la route d'inscription et de connexion #}
+<ul class="nav nav-tabs">
+    <li><a href="{{path("fos_user_security_login")}}">Connexion</a></li>
+    <li class="active"><a href="{{path("fos_user_registration_register")}}">S'inscrire</a></li>  
+</ul>
+<hr>
+
+{{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register'}}) }}
+{#{{ form_widget(form) }}#}
+Email : {{ form_widget(form.email) }}
+Pseudo : {{ form_widget(form.username) }}
+<div>
+    <input type="submit" value="{{ 'Valider'|trans }}" />
+</div>
+
+{{ form_end(form) }}
+
+<hr>

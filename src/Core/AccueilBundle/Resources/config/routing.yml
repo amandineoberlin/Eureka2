@@ -1,0 +1,5 @@
+#Via app/config/routing.yml toutes les routes commencent par "Accueil"
+
+accueil_homepage:
+    path:     /
+    defaults: { _controller: CoreAccueilBundle:Accueil:index }

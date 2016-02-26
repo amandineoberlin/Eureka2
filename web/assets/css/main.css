@@ -1,0 +1,21 @@
+body
+{
+    background:white;
+}
+
+#petitTitre
+{
+    font-weight:bold;
+    color:#7abcff;
+    text-align:center;
+}
+
+#divARalonge{
+    max-height:300px;
+    overflow-y: scroll;
+}
+
+.ui-menu{ 
+    width: 250px;
+    text-align:center;
+}

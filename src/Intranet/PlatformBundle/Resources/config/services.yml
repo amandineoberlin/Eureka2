@@ -1,0 +1,4 @@
+services:
+#    intranet_platform.example:
+#        class: Intranet\PlatformBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]

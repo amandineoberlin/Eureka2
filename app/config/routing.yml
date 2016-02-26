@@ -1,0 +1,23 @@
+#---------- Intranet Général  -------------------------------------------------#
+intranet_platform:
+    resource: "@IntranetPlatformBundle/Resources/config/routing.yml"
+    prefix:   /Intranet
+
+#----Partie FOSUserBundle routes-----#
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+    prefix: /Intranet
+
+
+#----------------------Core----------------------------------------------------#
+core_presentation:
+    resource: "@CorePresentationBundle/Resources/config/routing.yml"
+    prefix:   /Presentation
+
+core_contact:
+    resource: "@CoreContactBundle/Resources/config/routing.yml"
+    prefix:   /Contact
+
+core_accueil:
+    resource: "@CoreAccueilBundle/Resources/config/routing.yml"
+    prefix:   /Accueil

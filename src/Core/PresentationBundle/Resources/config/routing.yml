@@ -1,0 +1,5 @@
+#Via app/config/routing.yml toutes les routes commencent par "Presentation"
+
+presentation_homepage:
+    path:     /
+    defaults: { _controller: CorePresentationBundle:Presentation:index }

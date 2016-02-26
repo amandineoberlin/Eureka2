@@ -1,0 +1,4 @@
+services:
+#    core_contact.example:
+#        class: Core\ContactBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]
