@@ -529,3 +529,4 @@ b73689,::1,GET,http://localhost:8888/Eureka/web/app_dev.php/Accueil/login,145650
 df3ff2,::1,GET,http://localhost:8888/Eureka/web/app_dev.php/Accueil/login,1456505458,,404
 8ec607,::1,GET,http://localhost:8888/Eureka/web/app_dev.php/Intranet/login,1456505463,,200
 b7265d,::1,GET,http://localhost:8888/Eureka/web/app_dev.php/Intranet/login,1456505488,,200
+ccd567,::1,GET,http://localhost:8888/Eureka/web/app_dev.php/Intranet/login,1456506202,,200
