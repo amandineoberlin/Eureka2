@@ -156,6 +156,11 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'intranet_modifier-ma-demande')), array (  '_controller' => 'Intranet\\PlatformBundle\\Controller\\MainController::editAction',));
             }
 
+            // intranet_supprimer-ma-demande
+            if (0 === strpos($pathinfo, '/Intranet/supprimer-ma-demande') && preg_match('#^/Intranet/supprimer\\-ma\\-demande/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'intranet_supprimer-ma-demande')), array (  '_controller' => 'Intranet\\PlatformBundle\\Controller\\MainController::deleteAction',));
+            }
+
             if (0 === strpos($pathinfo, '/Intranet/log')) {
                 if (0 === strpos($pathinfo, '/Intranet/login')) {
                     // fos_user_security_login

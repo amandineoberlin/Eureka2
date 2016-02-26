@@ -40,7 +40,8 @@
 
         {# Pour le bouton, pas de label ni d'erreur, on affiche juste le widget #}
         {{ form_widget(form.save, {'attr': {'class': 'btn btn-primary'}}) }}
-
+        <a class="btn btn-danger" type="button" href="{{ path("intranet_accueil") }}">Annuler</a>
+        
         {# Génération automatique des champs pas encore écrits.
            Dans cet exemple, ce serait le champ CSRF (géré automatiquement par Symfony !)
            et tous les champs cachés (type « hidden »). #}

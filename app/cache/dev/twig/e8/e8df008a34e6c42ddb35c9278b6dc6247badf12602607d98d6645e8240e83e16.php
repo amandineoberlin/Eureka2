@@ -21,20 +21,20 @@ class __TwigTemplate_06f69d8910adb7031c0ecc795e6e081ab5bda97a7b2db893d9661bbe86a
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_107b0a9855e4098a380976bdb275bce567f62d44e5632af36db04e58dcb13f1a = $this->env->getExtension("native_profiler");
-        $__internal_107b0a9855e4098a380976bdb275bce567f62d44e5632af36db04e58dcb13f1a->enter($__internal_107b0a9855e4098a380976bdb275bce567f62d44e5632af36db04e58dcb13f1a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "IntranetPlatformBundle:Main:add.html.twig"));
+        $__internal_4ee23d7b0cec430062bcb2da2c6268204d83baed71c63215765ead6ddaaac615 = $this->env->getExtension("native_profiler");
+        $__internal_4ee23d7b0cec430062bcb2da2c6268204d83baed71c63215765ead6ddaaac615->enter($__internal_4ee23d7b0cec430062bcb2da2c6268204d83baed71c63215765ead6ddaaac615_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "IntranetPlatformBundle:Main:add.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_107b0a9855e4098a380976bdb275bce567f62d44e5632af36db04e58dcb13f1a->leave($__internal_107b0a9855e4098a380976bdb275bce567f62d44e5632af36db04e58dcb13f1a_prof);
+        $__internal_4ee23d7b0cec430062bcb2da2c6268204d83baed71c63215765ead6ddaaac615->leave($__internal_4ee23d7b0cec430062bcb2da2c6268204d83baed71c63215765ead6ddaaac615_prof);
 
     }
 
     // line 2
     public function block_body($context, array $blocks = array())
     {
-        $__internal_2d039795c4182c4f7a6f9d2e411db7405b82d4736c7d85ac7a42ecee65be5e31 = $this->env->getExtension("native_profiler");
-        $__internal_2d039795c4182c4f7a6f9d2e411db7405b82d4736c7d85ac7a42ecee65be5e31->enter($__internal_2d039795c4182c4f7a6f9d2e411db7405b82d4736c7d85ac7a42ecee65be5e31_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_136c35adb47c015d5931ab19bf23ddef7cf489492f531b6d48277dc0625428f0 = $this->env->getExtension("native_profiler");
+        $__internal_136c35adb47c015d5931ab19bf23ddef7cf489492f531b6d48277dc0625428f0->enter($__internal_136c35adb47c015d5931ab19bf23ddef7cf489492f531b6d48277dc0625428f0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 3
         echo "
@@ -113,15 +113,19 @@ class __TwigTemplate_06f69d8910adb7031c0ecc795e6e081ab5bda97a7b2db893d9661bbe86a
         echo "        ";
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "save", array()), 'widget', array("attr" => array("class" => "btn btn-primary")));
         echo "
-
+        <a class=\"btn btn-danger\" type=\"button\" href=\"";
+        // line 43
+        echo $this->env->getExtension('routing')->getPath("intranet_accueil");
+        echo "\">Annuler</a>
+        
         ";
-        // line 47
+        // line 48
         echo "        ";
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'rest');
         echo "
 
         ";
-        // line 50
+        // line 51
         echo "        ";
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_end');
         echo "
@@ -129,7 +133,7 @@ class __TwigTemplate_06f69d8910adb7031c0ecc795e6e081ab5bda97a7b2db893d9661bbe86a
 
 ";
         
-        $__internal_2d039795c4182c4f7a6f9d2e411db7405b82d4736c7d85ac7a42ecee65be5e31->leave($__internal_2d039795c4182c4f7a6f9d2e411db7405b82d4736c7d85ac7a42ecee65be5e31_prof);
+        $__internal_136c35adb47c015d5931ab19bf23ddef7cf489492f531b6d48277dc0625428f0->leave($__internal_136c35adb47c015d5931ab19bf23ddef7cf489492f531b6d48277dc0625428f0_prof);
 
     }
 
@@ -145,7 +149,7 @@ class __TwigTemplate_06f69d8910adb7031c0ecc795e6e081ab5bda97a7b2db893d9661bbe86a
 
     public function getDebugInfo()
     {
-        return array (  125 => 50,  119 => 47,  113 => 42,  106 => 37,  101 => 35,  97 => 34,  89 => 29,  84 => 27,  80 => 26,  71 => 21,  64 => 17,  58 => 14,  51 => 10,  46 => 7,  40 => 3,  34 => 2,  11 => 1,);
+        return array (  129 => 51,  123 => 48,  118 => 43,  113 => 42,  106 => 37,  101 => 35,  97 => 34,  89 => 29,  84 => 27,  80 => 26,  71 => 21,  64 => 17,  58 => 14,  51 => 10,  46 => 7,  40 => 3,  34 => 2,  11 => 1,);
     }
 }
 /* {% extends "IntranetPlatformBundle::layout.html.twig" %}*/
@@ -190,7 +194,8 @@ class __TwigTemplate_06f69d8910adb7031c0ecc795e6e081ab5bda97a7b2db893d9661bbe86a
 /* */
 /*         {# Pour le bouton, pas de label ni d'erreur, on affiche juste le widget #}*/
 /*         {{ form_widget(form.save, {'attr': {'class': 'btn btn-primary'}}) }}*/
-/* */
+/*         <a class="btn btn-danger" type="button" href="{{ path("intranet_accueil") }}">Annuler</a>*/
+/*         */
 /*         {# Génération automatique des champs pas encore écrits.*/
 /*            Dans cet exemple, ce serait le champ CSRF (géré automatiquement par Symfony !)*/
 /*            et tous les champs cachés (type « hidden »). #}*/

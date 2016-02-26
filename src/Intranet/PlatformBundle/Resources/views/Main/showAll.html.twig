@@ -20,7 +20,7 @@
                     <td>{{ demandes.description }}</td>
                     <td><a href="{{ path('intranet_voir-ma-demande', { 'id' : demandes.id }) }}" type="button" class="btn btn-default">Voir la demande</a></td>
                     <td><a href="{{ path('intranet_modifier-ma-demande', { 'id' : demandes.id }) }}" type="button" class="btn btn-warning">Modifier</a></td>
-                    <td><button type="button" class="btn btn-danger">Supprimer</button></td>
+                    <td><a href="{{ path('intranet_supprimer-ma-demande', { 'id' : demandes.id }) }}" type="button" class="btn btn-danger">Supprimer</a></td>
 
         </tr>
     {% endfor %}

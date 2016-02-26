@@ -19,3 +19,7 @@ intranet_voir-ma-demande:
 intranet_modifier-ma-demande:
     path:     /modifier-ma-demande/{id}
     defaults: { _controller: IntranetPlatformBundle:Main:edit }
+    
+intranet_supprimer-ma-demande:
+    path:     /supprimer-ma-demande/{id}
+    defaults: { _controller: IntranetPlatformBundle:Main:delete }

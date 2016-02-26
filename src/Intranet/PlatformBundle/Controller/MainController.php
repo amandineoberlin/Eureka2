@@ -5,6 +5,7 @@ namespace Intranet\PlatformBundle\Controller;
 //Classes Symfony à utiliser
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 //Entités à utiliser
 use Intranet\PlatformBundle\Entity\Demande;
 
@@ -90,7 +91,7 @@ class MainController extends Controller {
         $demande = $em->getRepository('IntranetPlatformBundle:Demande')->find($id);
         if (!$demande) {
             throw $this->createNotFoundException(
-                    'No news found for id ' . $id
+                    "Pas d'annonce trouvées pour cet ID" . $id
             );
         }
 
@@ -105,12 +106,48 @@ class MainController extends Controller {
 
         if ($form->isValid()) {
             $em->flush();
-            return new Response('Demande correctement mise à jour !');
+            $request->getSession()->getFlashBag()->add('notice', 'Annonce bien enregistrée.');
+
+            return $this->redirect($this->generateUrl('intranet_accueil'));
+        }
+// On passe la méthode createView() du formulaire à la vue
+// afin qu'elle puisse afficher le formulaire toute seule
+        return $this->render('IntranetPlatformBundle:Main:edit.html.twig', array(
+                    'form' => $form->createView(),
+        ));
+    }
+
+    public function deleteAction($id, Request $request) {
+
+        $em = $this->getDoctrine()->getManager();
+        $demande = $em->getRepository('IntranetPlatformBundle:Demande')->find($id);
+        if (!$demande) {
+            throw $this->createNotFoundException(
+                    "Pas d'annonce trouvées pour cet ID" . $id
+            );
         }
 
-        $build['form'] = $form->createView();
+        $form = $this->createFormBuilder($demande)
+                ->add('dateDebut', 'date')
+                ->add('dateFin', 'date')
+                ->add('description', 'textarea')
+                ->add('delete', 'submit')
+                ->getForm();
 
-        return $this->render('IntranetPlatformBundle:Main:edit.html.twig', $build);
+        $form->handleRequest($request);
+
+        if ($form->isValid()) {
+            $em->remove($demande);
+            $em->flush();
+            $request->getSession()->getFlashBag()->add('notice', 'Annonce bien supprimée.');
+
+            return $this->redirect($this->generateUrl('intranet_voir-mes-demandes'));
+        }
+// On passe la méthode createView() du formulaire à la vue
+// afin qu'elle puisse afficher le formulaire toute seule
+        return $this->render('IntranetPlatformBundle:Main:delete.html.twig', array(
+                    'form' => $form->createView(),
+        ));
     }
 
 }

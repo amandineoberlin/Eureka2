@@ -21,20 +21,20 @@ class __TwigTemplate_bfca4f3c194776b753c3a2ad33ef774b75b21ef7f10564942e6b76ccb3b
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_d4ab54819bd3777dd39aefd33654ee456c821cfbc97070e84fd4c90aeac99cad = $this->env->getExtension("native_profiler");
-        $__internal_d4ab54819bd3777dd39aefd33654ee456c821cfbc97070e84fd4c90aeac99cad->enter($__internal_d4ab54819bd3777dd39aefd33654ee456c821cfbc97070e84fd4c90aeac99cad_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "IntranetPlatformBundle:Main:showAll.html.twig"));
+        $__internal_e9a870fd0a4635bcee87065df46f5e7b23ec57a3235f54e974a6c2d6d649c9a1 = $this->env->getExtension("native_profiler");
+        $__internal_e9a870fd0a4635bcee87065df46f5e7b23ec57a3235f54e974a6c2d6d649c9a1->enter($__internal_e9a870fd0a4635bcee87065df46f5e7b23ec57a3235f54e974a6c2d6d649c9a1_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "IntranetPlatformBundle:Main:showAll.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_d4ab54819bd3777dd39aefd33654ee456c821cfbc97070e84fd4c90aeac99cad->leave($__internal_d4ab54819bd3777dd39aefd33654ee456c821cfbc97070e84fd4c90aeac99cad_prof);
+        $__internal_e9a870fd0a4635bcee87065df46f5e7b23ec57a3235f54e974a6c2d6d649c9a1->leave($__internal_e9a870fd0a4635bcee87065df46f5e7b23ec57a3235f54e974a6c2d6d649c9a1_prof);
 
     }
 
     // line 2
     public function block_body($context, array $blocks = array())
     {
-        $__internal_f51c64939e37cb244f43c9545dc8bc2db04d498ae4cbb76096f971784641ac96 = $this->env->getExtension("native_profiler");
-        $__internal_f51c64939e37cb244f43c9545dc8bc2db04d498ae4cbb76096f971784641ac96->enter($__internal_f51c64939e37cb244f43c9545dc8bc2db04d498ae4cbb76096f971784641ac96_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_8ea6ac4511f1caa59d4b32c3e75594b846c70c13232efc0cc20a5aebcd907a54 = $this->env->getExtension("native_profiler");
+        $__internal_8ea6ac4511f1caa59d4b32c3e75594b846c70c13232efc0cc20a5aebcd907a54->enter($__internal_8ea6ac4511f1caa59d4b32c3e75594b846c70c13232efc0cc20a5aebcd907a54_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 3
         echo "
@@ -80,7 +80,10 @@ class __TwigTemplate_bfca4f3c194776b753c3a2ad33ef774b75b21ef7f10564942e6b76ccb3b
             // line 22
             echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("intranet_modifier-ma-demande", array("id" => $this->getAttribute($context["demandes"], "id", array()))), "html", null, true);
             echo "\" type=\"button\" class=\"btn btn-warning\">Modifier</a></td>
-                    <td><button type=\"button\" class=\"btn btn-danger\">Supprimer</button></td>
+                    <td><a href=\"";
+            // line 23
+            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("intranet_supprimer-ma-demande", array("id" => $this->getAttribute($context["demandes"], "id", array()))), "html", null, true);
+            echo "\" type=\"button\" class=\"btn btn-danger\">Supprimer</a></td>
 
         </tr>
     ";
@@ -93,7 +96,7 @@ class __TwigTemplate_bfca4f3c194776b753c3a2ad33ef774b75b21ef7f10564942e6b76ccb3b
 
 ";
         
-        $__internal_f51c64939e37cb244f43c9545dc8bc2db04d498ae4cbb76096f971784641ac96->leave($__internal_f51c64939e37cb244f43c9545dc8bc2db04d498ae4cbb76096f971784641ac96_prof);
+        $__internal_8ea6ac4511f1caa59d4b32c3e75594b846c70c13232efc0cc20a5aebcd907a54->leave($__internal_8ea6ac4511f1caa59d4b32c3e75594b846c70c13232efc0cc20a5aebcd907a54_prof);
 
     }
 
@@ -109,7 +112,7 @@ class __TwigTemplate_bfca4f3c194776b753c3a2ad33ef774b75b21ef7f10564942e6b76ccb3b
 
     public function getDebugInfo()
     {
-        return array (  92 => 27,  81 => 22,  77 => 21,  73 => 20,  69 => 19,  65 => 18,  61 => 17,  58 => 16,  54 => 15,  40 => 3,  34 => 2,  11 => 1,);
+        return array (  95 => 27,  85 => 23,  81 => 22,  77 => 21,  73 => 20,  69 => 19,  65 => 18,  61 => 17,  58 => 16,  54 => 15,  40 => 3,  34 => 2,  11 => 1,);
     }
 }
 /* {% extends "IntranetPlatformBundle::layout.html.twig" %}*/
@@ -134,7 +137,7 @@ class __TwigTemplate_bfca4f3c194776b753c3a2ad33ef774b75b21ef7f10564942e6b76ccb3b
 /*                     <td>{{ demandes.description }}</td>*/
 /*                     <td><a href="{{ path('intranet_voir-ma-demande', { 'id' : demandes.id }) }}" type="button" class="btn btn-default">Voir la demande</a></td>*/
 /*                     <td><a href="{{ path('intranet_modifier-ma-demande', { 'id' : demandes.id }) }}" type="button" class="btn btn-warning">Modifier</a></td>*/
-/*                     <td><button type="button" class="btn btn-danger">Supprimer</button></td>*/
+/*                     <td><a href="{{ path('intranet_supprimer-ma-demande', { 'id' : demandes.id }) }}" type="button" class="btn btn-danger">Supprimer</a></td>*/
 /* */
 /*         </tr>*/
 /*     {% endfor %}*/
