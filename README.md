@@ -1,4 +1,4 @@
 Eureka
 ======
 
-A Symfony project created on February 22, 2016, 1:06 pm.
+Projet Symfony2 (application Intranet) conçu lors de mon stage de fin d'étude pour le diplôme de concepteur développeur informatique à M2I. 
